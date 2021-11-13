@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.TeacherDashboardController">
+    <stylesheets>
+        <URL value="@teacherdashboard.css" />
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="teachersPane" prefHeight="800.0" prefWidth="1300.0">
+         <top>
+            <Pane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="schoolName" layoutX="24.0" layoutY="10.0" prefHeight="20.0" prefWidth="130.0" text="Some High School" textFill="#707070">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="adminUserName" layoutX="1190.0" layoutY="10.0" textFill="#707070">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Circle fill="#3b83ff" layoutX="1270.0" layoutY="20.0" radius="10.0" stroke="WHITE" strokeType="INSIDE" />
+                  <ImageView fx:id="adminProfile" fitHeight="14.0" fitWidth="14.0" layoutX="1263.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/img/icons8-user.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="800.0" prefWidth="250.0" style="-fx-background-color: #3988FA;" styleClass="mainBorder" stylesheets="@teacherdashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="90.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/img/course-trak-logo.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="43.0" layoutY="165.0" prefHeight="501.0" prefWidth="167.0">
+                     <children>
+                        <Button alignment="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #3988FA;" text="Dashboard " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="62.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/icons8-dashboard_layout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="mainFxmlClass" />
+                              <String fx:value="LinkTab" />
+                           </styleClass>
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#loadClasses" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #3988FA;" text="Classes     " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="62.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/icons8-course.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="mainFxmlClass" />
+                              <String fx:value="LinkTab" />
+                           </styleClass>
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#loadAssignment" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #3988FA;" text="Assignment" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="62.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/icons8-task_planning.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="mainFxmlClass" />
+                              <String fx:value="LinkTab" />
+                           </styleClass>
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#loadMessages" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #3988FA;" text="S-Chat       " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="62.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/icons8-chat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="mainFxmlClass" />
+                              <String fx:value="LinkTab" />
+                           </styleClass>
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#loadReport" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #3988FA;" text="Reports       " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="62.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/icons8-statistics_report.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="mainFxmlClass" />
+                              <String fx:value="LinkTab" />
+                           </styleClass>
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#loadWeather" prefHeight="46.0" prefWidth="172.0" style="-fx-background-color: #3988FA;" text="Weather     " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="62.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/img/icons8-weather.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="mainFxmlClass" />
+                              <String fx:value="LinkTab" />
+                           </styleClass>
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

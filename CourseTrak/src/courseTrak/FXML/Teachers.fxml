@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1052.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.TeachersController">
+    <stylesheets>
+        <URL value="@teacherdashboard.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1052.0">
+         <children>
+            <Pane layoutX="773.0" layoutY="492.0" prefHeight="238.0" prefWidth="231.0" style="-fx-background-color: #3988fa;" styleClass="mainFxmlClass">
+               <children>
+                  <Pane layoutX="8.0" layoutY="13.0" prefHeight="215.0" prefWidth="214.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass">
+                     <children>
+                        <ImageView fx:id="teacherPic" fitHeight="200.0" fitWidth="200.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" styleClass="mainFxmlClass">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/img/pexels-photo-6325967.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow height="41.64" radius="18.845" width="35.74">
+                           <color>
+                              <Color opacity="0.44999998807907104" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="35.0" layoutY="108.0" prefHeight="630.0" prefWidth="700.0" style="-fx-background-color: #596A83 #596A83;" styleClass="mainFxmlClass" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <TableView fx:id="teacherTableView" editable="true" layoutX="6.0" layoutY="4.0" prefHeight="616.0" prefWidth="689.0" stylesheets="@tableView.css">
+                     <columns>
+                        <TableColumn fx:id="lastName" prefWidth="189.59214782714844" text="Last Name" />
+                        <TableColumn fx:id="firstName" prefWidth="192.49452209472656" text="First Name" />
+                        <TableColumn fx:id="Subject" prefWidth="188.0054931640625" text="Subject" />
+                        <TableColumn fx:id="Room" prefWidth="130.91326904296875" text="Room" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <TextField fx:id="teaSearchBox" layoutX="772.0" layoutY="109.0" prefHeight="49.0" prefWidth="230.0" promptText="Search" style="-fx-background-color: #ffffff;" stylesheets="@adminDashboardfxml.css">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <styleClass>
+                  <String fx:value="mainFxmlClass" />
+                  <String fx:value="Tab" />
+               </styleClass>
+            </TextField>
+            <Pane layoutX="773.0" layoutY="202.0" prefHeight="238.0" prefWidth="231.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass">
+               <children>
+                  <Button fx:id="addNewTeacher" layoutX="60.0" layoutY="37.0" mnemonicParsing="false" onAction="#addTeacher" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" text="Add New" textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="26.9" radius="20.32" spread="0.23" width="56.38">
+                           <color>
+                              <Color opacity="0.4000000059604645" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="updateTeacher" layoutX="60.0" layoutY="100.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" text="Update" textFill="#429a4a">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="26.9" radius="20.32" spread="0.23" width="56.38">
+                           <color>
+                              <Color opacity="0.4000000059604645" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="deleteTeacher" layoutX="60.0" layoutY="162.0" mnemonicParsing="false" onAction="#deleteTeacher" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" text="Delete" textFill="#fa3957">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="26.9" radius="20.32" spread="0.23" width="56.38">
+                           <color>
+                              <Color opacity="0.4000000059604645" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow radius="25.4775" spread="0.34" width="82.91">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.AssignGradeController">
+    <stylesheets>
+        <URL value="@teacherdashboard.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #596A83;">
+         <children>
+            <Label layoutX="191.0" layoutY="14.0" text="GRADE BOOK" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="80.0" text="Last Name" textFill="#ffffff80">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="274.0" layoutY="80.0" text="First Name" textFill="#ffffff80">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="274.0" layoutY="200.0" text="Assignment" textFill="#ffffff80">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="200.0" text="Class" textFill="#ffffff80">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="274.0" layoutY="310.0" text="Grade Letter" textFill="#ffffff80">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="310.0" text="Test Score" textFill="#ffffff80">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="276.0" layoutY="418.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="Submit">
+               <font>
+                  <Font name="Helvetica Neue" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="135.0" layoutY="418.0" mnemonicParsing="false" onAction="#exitWindow" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #FA3957;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="lastName" layoutX="75.0" layoutY="110.0" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="firstName" layoutX="268.0" layoutY="110.0" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="className" layoutX="75.0" layoutY="230.0" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="testScore" alignment="CENTER" layoutX="75.0" layoutY="340.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="gradeLetter" alignment="CENTER" layoutX="275.0" layoutY="340.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="assignment" layoutX="275.0" layoutY="230.0" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: #ffffff;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow height="91.75" radius="40.2175" spread="0.24" width="71.12">
+         <color>
+            <Color opacity="0.34029850363731384" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>

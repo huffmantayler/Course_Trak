@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.THomeController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="800.0" prefWidth="1052.0" style="-fx-background-color: #F8F8F8#F8F8F8;">
+         <children>
+            <Pane layoutX="1.0" prefHeight="150.0" prefWidth="1052.0" style="-fx-background-color: #3988FA;" styleClass="headerBorder" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Label fx:id="welcome" layoutX="49.0" layoutY="87.0" text="Welcome back, James" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Helvetica Neue" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow height="65.22" offsetY="10.0" radius="21.055" spread="0.15">
+                     <color>
+                        <Color blue="0.9803921580314636" green="0.5333333611488342" opacity="0.4000000059604645" red="0.2235294133424759" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Pane fx:id="adminTab1" layoutX="527.0" layoutY="206.0" prefHeight="85.0" prefWidth="199.0" style="-fx-background-color: #FFFFFF;" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Separator layoutX="72.0" layoutY="13.0" orientation="VERTICAL" prefHeight="58.0" prefWidth="1.0" />
+                  <ImageView fitHeight="58.0" fitWidth="67.0" layoutX="7.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/img/icons8-students.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="85.0" layoutY="17.0" text="Students" textFill="#707070cc">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfStudents" layoutX="85.0" layoutY="37.0" prefHeight="29.0" prefWidth="64.0" text="37">
+                     <font>
+                        <Font name="Helvetica Neue" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="mainFxmlClass" />
+                  <String fx:value="Tab" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane layoutX="526.0" layoutY="486.0" prefHeight="250.0" prefWidth="437.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="48.0" prefWidth="439.0" style="-fx-background-color: #F0F0F0;" styleClass="headerBorder" stylesheets="@adminDashboardfxml.css">
+                     <children>
+                        <Pane layoutX="252.0" prefHeight="48.0" prefWidth="51.0" style="-fx-background-color: #3988FA;" />
+                     </children></Pane>
+                  <Label layoutX="35.0" layoutY="16.0" text="S" textFill="#343434">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="95.0" layoutY="16.0" text="M" textFill="#343434">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="155.0" layoutY="16.0" text="T" textFill="#343434">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="215.0" layoutY="16.0" text="W">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="272.0" layoutY="16.0" text="T" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="332.0" layoutY="16.0" text="F" textFill="#343434">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="392.0" layoutY="16.0" text="S">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Group fx:id="datesGroup" layoutX="35.0" layoutY="50.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="297.0" prefHeight="19.0" prefWidth="20.0" text="1">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="352.0" prefHeight="19.0" prefWidth="20.0" text="2" textAlignment="CENTER">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="35.0" text="3">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="70.0" text="10">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="105.0" text="17">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="140.0" text="24">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="175.0" text="31">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="35.0" text="4">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Circle fill="DODGERBLUE" layoutX="245.0" layoutY="149.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Label layoutX="60.0" layoutY="70.0" text="11">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="105.0" text="18">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="140.0" text="25">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="35.0" text="5">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="70.0" text="12">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="105.0" text="19">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="140.0" text="26">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="180.0" layoutY="35.0" text="6">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="180.0" layoutY="70.0" text="13">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="180.0" layoutY="105.0" text="20">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="180.0" layoutY="140.0" text="27">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="35.0" text="7">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="70.0" text="14">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="105.0" text="21">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="140.0" text="28">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="297.0" layoutY="35.0" text="8">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="297.0" layoutY="70.0" text="15">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="297.0" layoutY="105.0" text="22">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="297.0" layoutY="140.0" text="29">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="359.0" layoutY="35.0" text="9">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="70.0" text="16">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="105.0" text="23">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="140.0" text="30">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </Pane>
+            <Label layoutX="527.0" layoutY="459.0" text="Calendar">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font></Label>
+            <Pane fx:id="classesTab" layoutX="765.0" layoutY="206.0" onMouseClicked="#loadClasses" prefHeight="85.0" prefWidth="199.0" style="-fx-background-color: #FFFFFF;" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Separator layoutX="72.0" layoutY="13.0" orientation="VERTICAL" prefHeight="58.0" prefWidth="1.0" />
+                  <ImageView fitHeight="58.0" fitWidth="67.0" layoutX="7.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/img/icons8-books.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="85.0" layoutY="17.0" text="Classes" textFill="#707070cc">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfClasses" layoutX="85.0" layoutY="37.0" prefHeight="29.0" prefWidth="64.0" text="3">
+                     <font>
+                        <Font name="Helvetica Neue" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="mainFxmlClass" />
+                  <String fx:value="Tab" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="info" layoutX="45.0" layoutY="206.0" prefHeight="250.0" prefWidth="438.0" style="-fx-background-color: #596A83;" styleClass="mainFxmlClass" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Label layoutX="134.0" layoutY="60.0" text="My Today's Schedule" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="122.0" layoutY="86.0" prefHeight="45.0" prefWidth="200.0" text="Add, control and check off daily " textFill="#b4b4b4" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="168.0" layoutY="109.0" prefHeight="45.0" prefWidth="109.0" text="tasks for the day" textFill="#b4b4b4" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Group layoutX="198.0" layoutY="153.0">
+                     <children>
+                        <Circle fx:id="makeSchedule" fill="WHITE" layoutX="21.0" layoutY="21.0" radius="21.0" stroke="WHITE" strokeType="INSIDE" styleClass="Tab" />
+                        <Label layoutX="12.0" text="+">
+                           <font>
+                              <Font name="Helvetica Neue" size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="mainFxmlClass" />
+                        <String fx:value="Tab" />
+                     </styleClass>
+                  </Group>
+               </children>
+            </Pane>
+            <Pane fx:id="accountMan" layoutX="45.0" layoutY="535.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3988FA #3988FA;" styleClass="mainFxmlClass" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Label layoutX="65.0" layoutY="106.0" text="Student" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="129.0" text="Information" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="91.0" />
+                  <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="77.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" styleClass="Tab">
+                     <image>
+                        <Image url="@../../assets/img/icons8-search_account.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="reportMan" layoutX="280.0" layoutY="535.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FA3957;" styleClass="mainFxmlClass" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Label layoutX="50.0" layoutY="106.0" text="Disciplinary" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="77.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" styleClass="Tab">
+                     <image>
+                        <Image url="@../../assets/img/icons8-business_report.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="70.0" layoutY="129.0" text="Report" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="adminTab11" layoutX="527.0" layoutY="346.0" prefHeight="85.0" prefWidth="199.0" style="-fx-background-color: #FFFFFF;" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <Label fx:id="numOfStudents1" layoutX="75.0" layoutY="28.0" prefHeight="29.0" prefWidth="109.0" text="Attendance">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="85.0" prefWidth="64.0" style="-fx-background-color: #596A83;" styleClass="mainFxmlClass">
+                     <effect>
+                        <DropShadow offsetX="6.0" radius="19.58" width="59.32">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <ImageView fx:id="Attendance" fitHeight="54.0" fitWidth="54.0" layoutX="5.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/img/icons8-attendance.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+               <styleClass>
+                  <String fx:value="mainFxmlClass" />
+                  <String fx:value="Tab" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="gradeBook" layoutX="765.0" layoutY="346.0" onMouseClicked="#loadGradeBook" prefHeight="85.0" prefWidth="199.0" style="-fx-background-color: #FFFFFF;" stylesheets="@adminDashboardfxml.css">
+               <styleClass>
+                  <String fx:value="mainFxmlClass" />
+                  <String fx:value="Tab" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <Label fx:id="numOfStudents11" layoutX="75.0" layoutY="28.0" prefHeight="29.0" prefWidth="109.0" text="Gradebook">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="85.0" prefWidth="64.0" style="-fx-background-color: #596A83;" styleClass="mainFxmlClass">
+                     <effect>
+                        <DropShadow offsetX="6.0" radius="19.58" width="59.32">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <ImageView fitHeight="54.0" fitWidth="51.0" layoutX="7.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/img/icons8-grades.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<!--update-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.StudentController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-3.0" prefHeight="800.0" prefWidth="1059.0" style="-fx-background-color: #ffffff;" stylesheets="@adminDashboardfxml.css">
+         <children>
+            <Pane layoutX="35.0" layoutY="215.0" prefHeight="530.0" prefWidth="600.0" style="-fx-background-color: #596A83;" styleClass="headerBorder" stylesheets="@adminDashboardfxml.css">
+               <children>
+                  <TableView fx:id="studentTableView" editable="true" layoutX="4.0" layoutY="2.0" prefHeight="520.0" prefWidth="593.0" stylesheets="@tableView.css">
+                    <columns>
+                        <TableColumn fx:id="stuID" maxWidth="2500.0" minWidth="5.0" prefWidth="10.0" text="ID" />
+                        <TableColumn fx:id="stu_lastName" editable="false" prefWidth="182.0" text="Last Name" />
+                      <TableColumn fx:id="stu_firstName" editable="false" prefWidth="150.0" text="First Name" />
+                      <TableColumn fx:id="stu_year" editable="false" prefWidth="236.0" text="Year" />
+                        <TableColumn fx:id="stu_gpa" editable="false" maxWidth="2000.0" prefWidth="59.0" text="GPA" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane layoutX="665.0" layoutY="80.0" prefHeight="663.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="59.32" radius="32.845" spread="0.17" width="74.06">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Circle fill="WHITE" layoutX="178.0" layoutY="70.0" radius="50.0" stroke="#3988fa" strokeType="INSIDE">
+                     <effect>
+                        <DropShadow height="70.38" radius="30.4525" spread="0.08" width="53.43">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Circle>
+                  <ImageView fx:id="studPic" fitHeight="117.0" fitWidth="130.0" layoutX="120.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/icons8-user%202.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="20.0" layoutY="140.0" text="Last Name : " textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="180.0" text="First Name : " textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastName" layoutX="105.0" layoutY="140.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="firstName" layoutX="105.0" layoutY="180.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="220.0" text="Grade Level :" textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gradeLevel" layoutX="113.0" layoutY="220.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="219.0" layoutY="140.0" text="Age :" textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="219.0" layoutY="180.0" text="DOB :" textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="age" layoutX="258.0" layoutY="140.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dob" layoutX="263.0" layoutY="180.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="219.0" layoutY="220.0" text="Sex :" textFill="#3988fa">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sex" layoutX="260.0" layoutY="220.0">
+                     <font>
+                        <Font name="Helvetica Neue" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="20.0" layoutY="260.0" prefHeight="265.0" prefWidth="320.0" style="-fx-background-color: #3988fa;" styleClass="mainFxmlClass">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="14.0" prefHeight="21.0" prefWidth="77.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" text="Classes" textAlignment="CENTER" textFill="#3988fa">
+                           <font>
+                              <Font name="Helvetica Neue" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="crs1" layoutX="55.0" layoutY="50.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="crs2" layoutX="55.0" layoutY="90.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="crs3" layoutX="55.0" layoutY="130.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="crs4" layoutX="199.0" layoutY="50.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="crs5" layoutX="199.0" layoutY="90.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="crs6" layoutX="199.0" layoutY="130.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Line endX="11.1602783203125" endY="118.3369140625" layoutX="85.0" layoutY="66.0" startX="139.0" startY="118.3369140625" stroke="#ffffffc9" />
+                        <Label layoutX="55.0" layoutY="208.0" text="Counselor :" textFill="#ffffff99">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="counselorName" layoutX="145.0" layoutY="208.0" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="538.0" prefHeight="110.0" prefWidth="320.0" style="-fx-background-color: #FA3957;" styleClass="mainFxmlClass">
+                     <children>
+                        <Pane layoutX="71.0" layoutY="-1.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #ffffff;" styleClass="headerBorder" />
+                        <Label layoutX="89.0" layoutY="4.0" text="Emergency Contacts">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emg1" layoutX="50.0" layoutY="40.0" textFill="#404040">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emg2" layoutX="50.0" layoutY="65.0" textFill="#404040">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emg1C" layoutX="192.0" layoutY="40.0" textFill="#404040">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emg2C" layoutX="192.0" layoutY="65.0" textFill="#404040">
+                           <font>
+                              <Font name="Helvetica Neue" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <TextField fx:id="stuSearchBox" layoutX="35.0" layoutY="113.0" prefHeight="49.0" prefWidth="200.0" promptText="Last/First Name" style="-fx-background-color: #ffffff;" stylesheets="@adminDashboardfxml.css">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <styleClass>
+                  <String fx:value="mainFxmlClass" />
+                  <String fx:value="Tab" />
+               </styleClass>
+            </TextField>
+            <Button fx:id="refreshTable" layoutX="260.0" layoutY="116.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="40.0" prefWidth="73.0" style="-fx-background-color: #3988fa;" styleClass="mainFxmlClass" text="Refresh" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="addStu" layoutX="360.0" layoutY="116.0" mnemonicParsing="false" onAction="#loadStudentReg" prefHeight="40.0" prefWidth="73.0" style="-fx-background-color: #429a4a#429a4a;" styleClass="mainFxmlClass" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="editStu" layoutX="460.0" layoutY="116.0" mnemonicParsing="false" onAction="#loadRegistration" prefHeight="40.0" prefWidth="73.0" style="-fx-background-color: #f2e539;" styleClass="mainFxmlClass" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="deleteStu" layoutX="560.0" layoutY="116.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="40.0" prefWidth="73.0" style="-fx-background-color: #FA3957;" styleClass="mainFxmlClass" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

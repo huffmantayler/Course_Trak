@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1052.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.ClassesController">
+    <stylesheets>
+        <URL value="@adminDashboardfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="800.0" prefWidth="1052.0">
+         <children>
+            <Pane layoutX="35.0" layoutY="90.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="68.17" radius="30.637500000000003" spread="0.2" width="56.38">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #3988FA;" styleClass="headerBorder">
+                     <effect>
+                        <DropShadow height="65.22" offsetY="10.0" radius="21.055">
+                           <color>
+                              <Color red="0.22540000081062317" green="0.539816677570343" blue="0.9800000190734863" opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <Label layoutX="91.0" layoutY="10.0" text="Science" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ListView fx:id="scienceList" fixedCellSize="-10.0" layoutX="10.0" layoutY="58.0" prefHeight="182.0" prefWidth="230.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow height="41.64" radius="18.1075" width="32.79">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ListView>
+               </children>
+            </Pane>
+            <Pane layoutX="407.0" layoutY="90.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="68.17" radius="30.637500000000003" spread="0.2" width="56.38">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #3988FA;" styleClass="headerBorder">
+                     <effect>
+                        <DropShadow height="65.22" offsetY="10.0" radius="21.055">
+                           <color>
+                              <Color red="0.22540000081062317" green="0.539816677570343" blue="0.9800000190734863" opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <Label layoutX="100.0" layoutY="10.0" text="Math" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ListView fx:id="mathList" layoutX="10.0" layoutY="58.0" prefHeight="182.0" prefWidth="230.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow height="41.64" radius="18.1075" width="32.79">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ListView>
+               </children>
+            </Pane>
+            <Pane layoutX="765.0" layoutY="90.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="68.17" radius="30.637500000000003" spread="0.2" width="56.38">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #3988FA;" styleClass="headerBorder">
+                     <effect>
+                        <DropShadow height="65.22" offsetY="10.0" radius="21.055">
+                           <color>
+                              <Color red="0.22540000081062317" green="0.539816677570343" blue="0.9800000190734863" opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+                  <Label layoutX="96.0" layoutY="10.0" text="Social" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="socialList" layoutX="10.0" layoutY="58.0" prefHeight="182.0" prefWidth="230.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow height="41.64" radius="18.1075" width="32.79">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ListView>
+               </children>
+            </Pane>
+            <Pane layoutX="35.0" layoutY="410.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="68.17" radius="30.637500000000003" spread="0.2" width="56.38">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #3988FA;" styleClass="headerBorder">
+                     <effect>
+                        <DropShadow height="65.22" offsetY="10.0" radius="21.055">
+                           <color>
+                              <Color red="0.22540000081062317" green="0.539816677570343" blue="0.9800000190734863" opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+                  <Label layoutX="95.0" layoutY="10.0" text="English" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="englishList" layoutX="10.0" layoutY="58.0" prefHeight="182.0" prefWidth="230.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow height="41.64" radius="18.1075" width="32.79">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ListView>
+               </children>
+            </Pane>
+            <Pane layoutX="407.0" layoutY="410.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="68.17" radius="30.637500000000003" spread="0.2" width="56.38">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #FF6000;" styleClass="headerBorder">
+                     <effect>
+                        <DropShadow height="65.22" offsetY="10.0" radius="21.055">
+                           <color>
+                              <Color red="1.0" green="0.3764705955982208" opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Pane>
+                  <Label layoutX="98.0" layoutY="10.0" text="Other" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="otherList" layoutX="10.0" layoutY="58.0" prefHeight="182.0" prefWidth="230.0" style="-fx-background-color: #ffffff;">
+                     <effect>
+                        <DropShadow height="41.64" radius="18.1075" width="32.79">
+                           <color>
+                              <Color opacity="0.20000000298023224" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ListView>
+               </children>
+            </Pane>
+            <Pane layoutX="765.0" layoutY="410.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass">
+               <effect>
+                  <DropShadow height="68.17" radius="30.637500000000003" spread="0.2" width="56.38">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Pane layoutX="83.0" layoutY="65.0" onMouseClicked="#addClass" prefHeight="79.0" prefWidth="90.0" style="-fx-background-color: #596A83;" styleClass="headerBorder">
+                     <children>
+                        <Label layoutX="27.0" layoutY="-4.0" text="+" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue" size="60.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Label layoutX="59.0" layoutY="167.0" text="Add New Class">
+                     <font>
+                        <Font name="Helvetica Neue" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

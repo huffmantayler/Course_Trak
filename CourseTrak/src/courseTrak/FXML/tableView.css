@@ -1,0 +1,91 @@
+/*
+ * Empty Stylesheet file.
+ */
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color:  #ffffff;
+    -fx-background-inserts: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+    
+}
+
+.table-view .corner-header {
+    -fx-background-color:  transparent;
+}
+
+.table-view .table-cell {
+    -fx-background-color: transparent;
+    -fx-text-color:  #ffffff;
+    -fx-font-size: 15;
+    -fx-font-family: Helvetica Neue;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-size: 15;
+    -fx-font-family: Helvetica Neue;
+}
+
+.table-row-cell:hover{
+    -fx-background-color:  transparent;
+    -fx-text-background-color:  #3988FA;
+}
+
+.table-row-cell:selected{
+    -fx-background-color:  #3988FA;
+}
+
+.table-row-cell:selected .text{
+    -fx-text-background-color:  #fffff;
+}
+
+.table-row-cell:highlighted {
+    -fx-background-color: #FA3957;
+    -fx-background-radius: 15px;
+}
+
+.table-row-cell:odd{
+    -fx-background-color:  #A2AFB8;
+    -fx-background-inserts: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:even{
+    -fx-background-color:  #D3DBDC;
+    -fx-background-inserts: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  #596A83;
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  #596A83;
+}

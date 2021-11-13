@@ -1,0 +1,41 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-radius: 12;
+}
+
+.mainBorder{
+    -fx-background-radius: 0 12 12 0;
+}
+
+.headerBorder{
+    -fx-background-radius: 0 0 12 12;
+}
+.Tab:hover {
+    -fx-border-radius: 2;
+    -fx-border-width: 2;
+    -fx-border-color: #FFFFFF;
+    -fx-scale-y: 1.1;
+}
+
+.LinkTab:hover{
+    -fx-border-radius: 12;
+    -fx-border-color: #FFFFFF;
+    -fx-scale-y: 1.1;
+}
+
+.WhiteTab:hover{
+    -fx-border-radius: 2;
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+    -fx-scale-y: 1.1;
+}
+
+.Days:hover{
+    -fx-background-color:  #F0F0F0;
+    -fx-background-radius: 12 12 12 12;
+    -fx-background-radius: 12;
+}

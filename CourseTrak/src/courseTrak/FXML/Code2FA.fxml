@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="code2FAPane" fx:id="code2FAPane" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseTrak.Admin.Code2FAController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1300.0">
+         <image>
+            <Image url="@../assets/img/loginBlured.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="460.0" layoutY="278.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #596A83;">
+         <children>
+            <Button fx:id="verifyCode" layoutX="205.0" layoutY="128.0" mnemonicParsing="false" onAction="#checkVerify" prefHeight="32.0" prefWidth="65.0" style="-fx-background-color: #4BD123;" text="Verify" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="requestCode" layoutX="130.0" layoutY="128.0" mnemonicParsing="false" onAction="#codeRequest" prefHeight="32.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF;" text="Request">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="code2FA" alignment="CENTER" layoutX="130.0" layoutY="77.0" prefHeight="32.0" prefWidth="140.0" promptText="Enter Code" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="137.0" layoutY="41.0" text="2FA Verification" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Neue" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
